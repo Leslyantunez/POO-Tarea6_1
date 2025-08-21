@@ -19,7 +19,7 @@ namespace DirectorioEmp.Clases
         private DateTime fechaExpiracion { set; get; }
         private string pais { set; get; }
 
-        public Grado(string v)
+        public Grado()
         { }
 
         public int getnumeroGrado()
@@ -31,9 +31,9 @@ namespace DirectorioEmp.Clases
         {
             this.numerogrado = numerogrado; 
         }
-        public string getniveleducativo()
+        public string getnivelEducativo()
         {
-            return this.nivelEducativo = nivelEducativo;
+            return this.nivelEducativo; 
         }
         public void setnivelEducativo(string nivelEducativo)
         {
@@ -95,8 +95,14 @@ namespace DirectorioEmp.Clases
         {
             return this.pais;
         }
-        
 
-
+        public Grado(int numeroGrado)
+        {
+            this.numerogrado = numeroGrado;
+        }
+        public Grado(string nivelEducativo)
+        {
+            this.nivelEducativo = nivelEducativo;
+        }
     }
 }

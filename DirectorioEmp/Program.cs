@@ -10,6 +10,8 @@ namespace DirectorioEmp
 {
     internal class Program
     {
+        
+
         static void Main(string[] args)
         {
             
@@ -17,53 +19,75 @@ namespace DirectorioEmp
             List<Grado> Grado = new List<Grado>();
             
 
-            Grado NumGrado = new Grado("3");
-            Grado NivelEducativo = new Grado("Primaria");
-            Grado Institucion = new Grado("Jose Cecilio del Valle");
-            Grado NombreTitulo = new Grado("Certificado de primaria");
-            Grado FechaInicio = new Grado("2/3/2010");
-            Grado FechaFinal = new Grado("15/12/2016");
-            Grado TipoGrado = new Grado("Primaria");
-            Grado FechaExpiracion = new Grado("15/8/2024");
-            Grado PaisGrado = new Grado("Honduras");
 
             //Declaracion de objetos Grado
+
+            Grado g1 = new Grado("5");  
+            Grado g2 = new Grado("UNAH");
+            Grado g3 = new Grado("Licenciatura");
+            Grado g4 = new Grado("Ingenieria en sistemas");
+            Grado g5 = new Grado("2024-08-15");
+            Grado g6 = new Grado("2020-09-20");
+            Grado g7 = new Grado("Licenciatura en Informatica");
+            Grado g8 = new Grado("2026-12-31");
+            Grado g9 = new Grado("Honduras");
             
-            Grado.Add(NumGrado);
-            Grado.Add(NivelEducativo);
-            Grado.Add(Institucion);
-            Grado.Add(NombreTitulo);
-            Grado.Add(FechaInicio);
-            Grado.Add(FechaFinal);
-            Grado.Add(TipoGrado);
-            Grado.Add(FechaExpiracion);
-            Grado.Add(PaisGrado);
+
+            Grado.Add(g1);
+            Grado.Add(g2);
+            Grado.Add(g3);
+            Grado.Add(g4);
+            Grado.Add(g5);
+            Grado.Add(g6);
+            Grado.Add(g7);
+            Grado.Add(g8);
+            Grado.Add(g9);
+
 
             foreach (Grado g in Grado)
             {
-                Console.WriteLine(Grado);
-              
+                Console.WriteLine("Grado");
+                Console.WriteLine(g.getnumeroGrado());
+                Console.WriteLine(g.getnivelEducativo());
+                Console.WriteLine(g.getinstitucion());
+                Console.WriteLine(g.getnombreTitulo());
+                Console.WriteLine(g.getfechaInicio());
+                Console.WriteLine(g.getfechaFinal());
+                Console.WriteLine(g.gettipoGrado());
+                Console.WriteLine(g.getfechaExpiracion());
+                Console.WriteLine(g.getpais());
+
             }
            
             List<Cargo> cargos = new List<Cargo>();
 
-            Cargo NumCargo = new Cargo();
-            Cargo Titulo = new Cargo();
-            Cargo fechaInicio = new Cargo();
-            Cargo fechaFinal = new Cargo();
-            Cargo EmpleoActual = new Cargo();
-            Cargo Empresa = new Cargo();
-            Cargo Salario = new Cargo();
-            Cargo Detalles = new Cargo();
+            Cargo Cargo1 = new Cargo();
 
-            cargos.Add(NumCargo);
-            cargos.Add(Titulo);
-            cargos.Add(fechaInicio);
-            cargos.Add(fechaFinal);
-            cargos.Add(EmpleoActual);
-            cargos.Add(Empresa);
-            cargos.Add(Salario);
-            cargos.Add(Detalles);
+           
+
+            Cargo1.setnumeroCargo(1);
+            Cargo1.settitulo("Desarrollador de Software");
+            Cargo1.setfechaInicio(new DateTime(2018, 1, 1));
+            Cargo1.setfechaFinal(new DateTime(2020, 12, 31));
+            Cargo1.setempleoActual(true);
+            Cargo1.setempresa("Tech Solutions");
+            Cargo1.setsalario(50000);
+            Cargo1.setdetalles("Desarrollo de aplicaciones web.");
+
+            cargos.Add(Cargo1);
+            foreach (Cargo g in cargos)
+            {
+                Console.WriteLine("Cargo");
+                Console.WriteLine(g.getnumeroCargo());
+                Console.WriteLine(g.gettitulo());
+                Console.WriteLine(g.getfechaInicio());
+                Console.WriteLine(g.getfechaFinal());
+                Console.WriteLine(g.getempleoActual());
+                Console.WriteLine(g.getempresa());
+                Console.WriteLine(g.getsalario());
+                Console.WriteLine(g.getdetalles());
+
+            }
 
             Console.ReadLine();
     }

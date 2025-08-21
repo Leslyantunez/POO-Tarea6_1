@@ -91,6 +91,10 @@ namespace DirectorioEmp.Clases
         {
             return this.detalles;
         }
+        public void setdetalles(string detalles)
+        {
+            this.detalles = detalles;
+        }
 
     }
 }
