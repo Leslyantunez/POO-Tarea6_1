@@ -96,6 +96,7 @@ namespace DirectorioEmp.Clases
             return this.pais;
         }
 
+        //declaracion
         public Grado(int numeroGrado)
         {
             this.numerogrado = numeroGrado;
@@ -104,5 +105,6 @@ namespace DirectorioEmp.Clases
         {
             this.nivelEducativo = nivelEducativo;
         }
+        
     }
 }
