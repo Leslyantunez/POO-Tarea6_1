@@ -14,84 +14,44 @@ namespace DirectorioEmp
 
         static void Main(string[] args)
         {
-            
-            
-            List<Grado> Grado = new List<Grado>();
-            
 
 
-            //Declaracion de objetos Grado
-
-            Grado g1 = new Grado("5");  
-            Grado g2 = new Grado("UNAH");
-            Grado g3 = new Grado("Licenciatura");
-            Grado g4 = new Grado("Ingenieria en sistemas");
-            Grado g5 = new Grado("2024-08-15");
-            Grado g6 = new Grado("2020-09-20");
-            Grado g7 = new Grado("Licenciatura en Informatica");
-            Grado g8 = new Grado("2026-12-31");
-            Grado g9 = new Grado("Honduras");
-            
-
-            Grado.Add(g1);
-            Grado.Add(g2);
-            Grado.Add(g3);
-            Grado.Add(g4);
-            Grado.Add(g5);
-            Grado.Add(g6);
-            Grado.Add(g7);
-            Grado.Add(g8);
-            Grado.Add(g9);
+            List<Persona> personas = new List<Persona>();
 
 
-            foreach (Grado g in Grado)
+            Persona per1 = new Persona("Gabriel", "García Márquez");
+            Persona per2 = new Persona("José", "Saramago");
+
+            per1.grados.Add(new Grado(1, "Universitario", "Universidad Nacional", "Licenciatura en Literatura"));
+            per2.cargos.Add(new Cargo(1, "Profesor", "Universidad Nacional", 9500));
+
+
+            personas.Add(per1);
+            personas.Add(per2);
+
+
+            foreach (Persona per in personas)
             {
-                Console.WriteLine("Grado");
-                Console.WriteLine(g.getnumeroGrado());
-                Console.WriteLine(g.getnivelEducativo());
-                Console.WriteLine(g.getinstitucion());
-                Console.WriteLine(g.getnombreTitulo());
-                Console.WriteLine(g.getfechaInicio());
-                Console.WriteLine(g.getfechaFinal());
-                Console.WriteLine(g.gettipoGrado());
-                Console.WriteLine(g.getfechaExpiracion());
-                Console.WriteLine(g.getpais());
+                Console.WriteLine(per.getNombreCompleto());
 
-            }
-           
-            List<Cargo> cargos = new List<Cargo>();
 
-            Cargo Cargo1 = new Cargo();
+                foreach (Grado g in per.grados)
+                {
+                    Console.WriteLine("  Grado: " + g.getnumeroGrado() + "," + " Nivel educativo: " + g.getnivelEducativo() + "," + "" + " Institucion: " + g.getInstitucion() +
+                       "," + " Titulo: " + g.getnombreTitulo());
 
-           
+                }
 
-            Cargo1.setnumeroCargo(1);
-            Cargo1.settitulo("Desarrollador de Software");
-            Cargo1.setfechaInicio(new DateTime(2018, 1, 1));
-            Cargo1.setfechaFinal(new DateTime(2020, 12, 31));
-            Cargo1.setempleoActual(true);
-            Cargo1.setempresa("Tech Solutions");
-            Cargo1.setsalario(50000);
-            Cargo1.setdetalles("Desarrollo de aplicaciones web.");
+                foreach (Cargo c in per.cargos)
+                {
+                    Console.WriteLine(" Cargo: " + c.getNumeroCargo() + ", " + " Titulo: " + c.getTitulo() + ", " + " Empresa: " + c.getEmpresa() + ", " + " Salario: " + c.getSalario());
 
-            cargos.Add(Cargo1);
-            foreach (Cargo g in cargos)
-            {
-                Console.WriteLine("Cargo");
-                Console.WriteLine(g.getnumeroCargo());
-                Console.WriteLine(g.gettitulo());
-                Console.WriteLine(g.getfechaInicio());
-                Console.WriteLine(g.getfechaFinal());
-                Console.WriteLine(g.getempleoActual());
-                Console.WriteLine(g.getempresa());
-                Console.WriteLine(g.getsalario());
-                Console.WriteLine(g.getdetalles());
+                }
 
             }
 
             Console.ReadLine();
-    }
-  
-
+        }
     }
 }
+ 

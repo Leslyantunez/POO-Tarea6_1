@@ -8,103 +8,60 @@ namespace DirectorioEmp.Clases
 {
     public class Grado
     {
+        private int numeroGrado { get; set; }
+        private string nivelEducativo { get; set; }
+        private string institucion { get; set; }
+        private string nombreTitulo { get; set; }
+        private DateTime fechaInicio { get; set; }
+        private DateTime fechaFinal { get; set; }
+        private string tipoGrado { get; set; }
+        private DateTime fechaExpiracion { get; set; }
+        private string pais { get; set; }
 
-        private int numerogrado { set; get; }
-        private string nivelEducativo { set; get; }
-        private string institucion { set; get; }
-        private string nombreTitulo {set; get; }
-        private DateTime fechaInicio { set; get; }
-        private DateTime fechaFinal { set; get; }
-        private string tipoGrado { set; get; }
-        private DateTime fechaExpiracion { set; get; }
-        private string pais { set; get; }
+        //Constructor vacio
+        public Grado() { }
 
-        public Grado()
-        { }
+        // Constructor que permite completar todas las variables internas
+        public Grado(int numeroGrado, string nivelEducativo, string institucion, string nombreTitulo,
+                     DateTime fechaInicio, DateTime fechaFinal, string tipoGrado, DateTime fechaExpiracion, string pais)
+        {
+            this.numeroGrado = numeroGrado;
+            this.nivelEducativo = nivelEducativo;
+            this.institucion = institucion;
+            this.nombreTitulo = nombreTitulo;
+            this.fechaInicio = fechaInicio;
+            this.fechaFinal = fechaFinal;
+            this.tipoGrado = tipoGrado;
+            this.fechaExpiracion = fechaExpiracion;
+            this.pais = pais;
+        }
+
+        public Grado(int numeroGrado, string nivelEducativo, string institucion, string nombreTitulo)
+        {
+            this.numeroGrado = numeroGrado;
+            this.nivelEducativo = nivelEducativo;
+            this.institucion = institucion;
+            this.nombreTitulo = nombreTitulo;
+        }
 
         public int getnumeroGrado()
         {
-            return this.numerogrado;
+            return numeroGrado;
+        }
 
-        }
-        public void setnumeroGrado(int numeroGrado)
-        {
-            this.numerogrado = numerogrado; 
-        }
         public string getnivelEducativo()
         {
-            return this.nivelEducativo; 
-        }
-        public void setnivelEducativo(string nivelEducativo)
-        {
-            this.nivelEducativo = nivelEducativo;
-        }
-        public string getinstitucion()
-        {
-            return this.institucion;
-        }
-        public void setinstitucion(string institucion)
-        {
-            this.institucion = institucion;
-        }
-        public string getnombreTitulo()
-        {
-            return this.nombreTitulo;
-        }
-        public void setnombreTitulo(string nombreTitulo)
-        {
-            this.nombreTitulo = nombreTitulo;
-        }
-        public DateTime getfechaInicio()
-        {
-            return this.fechaInicio;
-        }
-        public void setfechaInicio(DateTime fechaInicio)
-        {
-            this.fechaInicio = fechaInicio;
-        }
-        public DateTime getfechaFinal()
-        {
-            return this.fechaFinal;
-        }
-        public void setfechaFinal(DateTime fechaFinal)
-        {
-            this.fechaFinal = fechaFinal;
-        }
-        public string gettipoGrado()
-        {
-            return this.tipoGrado;
-        }
-        public void settipoGrado(string tipoGrado)
-        {
-            this.tipoGrado = tipoGrado;
-        }
-        public DateTime getfechaExpiracion()
-        {
-            return this.fechaExpiracion;
-        }
-        public void setfechaExpiracion(DateTime fechaExpiracion)
-        {
-            this.fechaExpiracion = fechaExpiracion;
-        }
-        public string getpais()
-        {
-            return this.pais = pais;
-        }
-        public string setpais(string pais)
-        {
-            return this.pais;
+            return nivelEducativo;
         }
 
-        //declaracion
-        public Grado(int numeroGrado)
+        public string getInstitucion()
         {
-            this.numerogrado = numeroGrado;
+            return institucion;
         }
-        public Grado(string nivelEducativo)
+
+        public string getnombreTitulo()
         {
-            this.nivelEducativo = nivelEducativo;
+            return nombreTitulo;
         }
-        
     }
 }

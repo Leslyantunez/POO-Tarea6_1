@@ -8,49 +8,84 @@ namespace DirectorioEmp.Clases
 {
     public class Persona
     {
-        private string NumeroID { set; get; }
-        private string Nombres { set; get; }
-        private string Apellidos { set; get; }
-        private DateTime FechaNacimiento { set; get; }
-        private string Telefono { set; get; }
-        private string Celular { set; get; }
-        private string Pais { set; get; }
-        private string Ciudad { set; get; }
-        private string Direccion { set; get; }
-        private string Profesion { set; get; }
+        private string numeroId { get; set; }
+        private string nombres { get; set; }
+        private string apellidos { get; set; }
+        private DateTime fechaNacimiento { get; set; }
+        private string telefono { get; set; }
+        private string celular { get; set; }
+        private string email { get; set; }
+        private string ciudad { get; set; }
+        private string direccion { get; set; }
+        private string profesion { get; set; }
+
+        public List<Grado> grados = new List<Grado>();
+        public List<Cargo> cargos = new List<Cargo>();
 
 
 
-        List<Grado> Grado = new List<Grado>();
+
+
+        //Constructor vacio
+        public Persona()
+        {
+
+        }
+
+        // Constructor que permite completar todas las variables internas
+        public Persona(string numeroId, string nombres, string apellidos, DateTime fechaNacimiento,
+                       string telefono, string celular, string email, string ciudad,
+                       string direccion, string profesion)
+        {
+            this.numeroId = numeroId;
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+            this.fechaNacimiento = fechaNacimiento;
+            this.telefono = telefono;
+            this.celular = celular;
+            this.email = email;
+            this.ciudad = ciudad;
+            this.direccion = direccion;
+            this.profesion = profesion;
+
+        }
+
+        public Persona(string nombres, string apellidos)
+        {
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+
+        }
+
+        public void setNombres(string p_nombres)
+        {
+            this.nombres = p_nombres;
+        }
+
+        public string getNombres()
+        {
+            return this.nombres;
+        }
+
+
+        public void setApellidos(string p_apellidos)
+        {
+            this.apellidos = p_apellidos;
+        }
+
+        public string getApellidos()
+        {
+            return this.apellidos;
+        }
+
+
+        public string getNombreCompleto()
+        {
+            return this.nombres + " " + this.apellidos;
+        }
 
 
 
-        public Grado NumGrado { get; set; }
-        public Grado NivelEducativo { get; set; }
-        public Grado Institucion { get; set; }
-        public Grado NombreTitulo { get; set; }
-        public Grado FechaInicio { get; set; }
-        public Grado FechaFinal { get; set; }
-        public Grado TipoGrado { get; set; }
-        public Grado FechaExpiracion { get; set; }
-        public Grado PaisGrado { get; set; }
 
-        List<Cargo> Cargos = new List<Cargo>();
-
-        public Cargo NumCargo { get; set; }
-        public Cargo Titulo { get; set; }
-        public Cargo fechaInicio { get; set; }
-        public Cargo fechaFinal { get; set; }
-        public Cargo EmpleoActaul { get; set; }
-        public Cargo Empresa { get; set; }
-        public Cargo Salario { get; set; }
-        public Cargo Detalles { get; set; }
-   
-       
-        
     }
- 
 }
-
-
-

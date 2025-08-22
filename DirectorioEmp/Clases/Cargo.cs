@@ -8,93 +8,70 @@ namespace DirectorioEmp.Clases
 {
     public class Cargo
     {
+        private int numeroCargo { get; set; }
 
-        private int numeroCargo { set; get; }
-        private string titulo { set; get; }
-        private DateTime fechaInicio { set; get; }
-        private DateTime fechaFinal { set; get; }
-        private bool empleoActual { set; get; }
-        private string empresa { set; get; }
-        private decimal salario { set; get; }
-        private string detalles { set; get; }
+        private string titulo { get; set; }
+
+        private DateTime fechaInicio { get; set; }
+
+        private DateTime fechaFinal { get; set; }
+
+        private bool empleoActual { get; set; }
+
+        private string empresa { get; set; }
+
+        private decimal salario { get; set; }
+
+        private string detalles { get; set; }
 
 
+        //Constructor vacio
         public Cargo()
-        { }
+        {
 
-        public Cargo(int numeroCargo)
+        }
+
+        //Constructor que permite completar todas las variables internas
+        public Cargo(int numeroCargo, string titulo, DateTime fechaInicio, DateTime fechaFinal,
+                     bool empleoActual, string empresa, decimal salario, string detalles)
         {
             this.numeroCargo = numeroCargo;
             this.titulo = titulo;
-
-
-        }
-        public int getnumeroCargo()
-        {
-            return this.numeroCargo;
-
-        }
-        public void setnumeroCargo(int numeroCargo)
-        {
-            this.numeroCargo = numeroCargo;
-
-        }
-        public string gettitulo()
-        {
-            return this.titulo = titulo;
-        }
-        public void settitulo(string titulo)
-        {
-            this.titulo = titulo;
-        }
-        public DateTime getfechaInicio()
-        {
-            return this.fechaInicio;
-        }
-        public void setfechaInicio(DateTime fechaInicio)
-        {
             this.fechaInicio = fechaInicio;
-        }
-        public DateTime getfechaFinal()
-        {
-            return this.fechaFinal;
-        }
-        public void setfechaFinal(DateTime fechaFinal)
-        {
             this.fechaFinal = fechaFinal;
-        }
-        public bool getempleoActual()
-        {
-            return this.empleoActual;
-        }
-        public void setempleoActual(bool empleoActual)
-        {
             this.empleoActual = empleoActual;
-        }
-        public string getempresa()
-        {
-            return this.empresa;
-        }
-        public void setempresa(string empresa)
-        {
             this.empresa = empresa;
-        }
-        public decimal getsalario()
-        {
-            return this.salario;
-        }
-        public void setsalario(decimal salario)
-        {
             this.salario = salario;
-        }
-        public string getdetalles()
-        {
-            return this.detalles;
-        }
-        public void setdetalles(string detalles)
-        {
             this.detalles = detalles;
         }
 
+        public Cargo(int numeroCargo, string titulo, string empresa, decimal salario)
+        {
+            this.numeroCargo = numeroCargo;
+            this.titulo = titulo;
+            this.empresa = empresa;
+            this.salario = salario;
+        }
+
+
+        public int getNumeroCargo()
+        {
+            return numeroCargo;
+        }
+
+        public string getTitulo()
+        {
+            return titulo;
+        }
+
+        public string getEmpresa()
+        {
+            return empresa;
+        }
+
+        public decimal getSalario()
+        {
+            return salario;
+        }
     }
 }
